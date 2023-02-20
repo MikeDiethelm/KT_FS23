@@ -1,0 +1,987 @@
+<!DOCTYPE html><html><head>
+      <title>Zusammenfassung KT</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <style>h2 {
+  border-bottom: solid 1px lightgrey;
+  page-break-before: always;
+}
+.autocol {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -1rem;
+}
+.autocol > * {
+  padding: 0 1rem;
+}
+.autocol.end {
+  align-items: flex-end;
+}
+</style>
+<h1 class="mume-header" id="zusammenfassung-kt">Zusammenfassung KT</h1>
+
+<h2 class="mume-header undefined" id="inhaltsverzeichnis">Inhaltsverzeichnis</h2>
+
+<ol>
+<li><a href="#osi-referenzmodell">OSI-Referenzmodell</a>
+<ol>
+<li><a href="#physical-layer">Physical Layer</a></li>
+<li><a href="#data-link-layer">Data Link Layer</a></li>
+<li><a href="#network-layer">Network Layer</a></li>
+<li><a href="#transport-layer">Transport Layer</a></li>
+<li><a href="#session-layer">Session Layer</a></li>
+<li><a href="#presentation-layer">Presentation Layer</a></li>
+<li><a href="#application-layer">Application Layer</a></li>
+<li><a href="#kritik">Kritik</a></li>
+</ol>
+</li>
+<li><a href="#%C3%BCbertragungsmedien">&#xDC;bertragungsmedien</a>
+<ol>
+<li><a href="#ausbreitungsgeschwindigkeit">Ausbreitungsgeschwindigkeit</a></li>
+<li><a href="#signald%C3%A4mpfung-und-d%C3%A4mpfungsbelag">Signald&#xE4;mpfung und D&#xE4;mpfungsbelag</a></li>
+<li><a href="#koaxialkabel">Koaxialkabel</a></li>
+<li><a href="#twisted-pair">Twisted Pair</a></li>
+<li><a href="#lichtwellenleiter">Lichtwellenleiter</a></li>
+<li><a href="#strukturierte-geb%C3%A4udeverkabelung">Strukturierte Geb&#xE4;udeverkabelung</a></li>
+</ol>
+</li>
+<li><a href="#physical-layer-1">Physical Layer</a>
+<ol>
+<li><a href="#kopplung-der-kommunikationspartner">Kopplung der Kommunikationspartner</a></li>
+<li><a href="#%C3%BCbertragungsverfahren">&#xDC;bertragungsverfahren</a></li>
+<li><a href="#leitungscodes">Leitungscodes</a></li>
+<li><a href="#nutzung-der-bandbreite">Nutzung der Bandbreite</a></li>
+</ol>
+</li>
+<li><a href="#data-link-layer-1">Data Link Layer</a>
+<ol>
+<li><a href="#frame-l%C3%A4nge">Frame-L&#xE4;nge</a></li>
+<li><a href="#fehlererkennung-und-korrektur">Fehlererkennung und -korrektur</a></li>
+<li><a href="#flow-control">Flow control</a></li>
+<li><a href="#medium-zugriff">Medium Zugriff</a></li>
+<li><a href="#layer-2-protokolle">Layer-2-Protokolle</a></li>
+</ol>
+</li>
+<li><a href="#lokale-netzwerke-lan">Lokale Netzwerke (LAN)</a>
+<ol>
+<li><a href="#topologie">Topologie</a></li>
+<li><a href="#%C3%BCbertragungsarten">&#xDC;bertragungsarten</a></li>
+<li><a href="#normung-lan-und-man">Normung LAN und MAN</a></li>
+<li><a href="#shared-ethernet">Shared Ethernet</a></li>
+<li><a href="#aufbau-ethernet-frames">Aufbau Ethernet-Frames</a></li>
+<li><a href="#repeater-und-hubs">Repeater und Hubs</a></li>
+<li><a href="#%C3%BCbungen">&#xDC;bungen</a></li>
+</ol>
+</li>
+<li><a href="#switched-lan-und-ethernet-technologien">Switched LAN und Ethernet-Technologien</a></li>
+</ol>
+<h2 class="mume-header" id="osi-referenzmodell">OSI-Referenzmodell</h2>
+
+<p>Peer-to-peer Protokolle zwischen gleichgestellten Schichten.<br>
+Anbieten der Dienste f&#xFC;r die n&#xE4;chsth&#xF6;here Schicht.</p>
+<p><img src="osi-model.png" alt="&quot;OSI-Modell&quot;"></p>
+<h3 class="mume-header" id="physical-layer">Physical Layer</h3>
+
+<p>Das &#xDC;bertragungsmedium ist nicht teil des OSI-Modells. Der Physical Layer ist, wie jede andere Schicht, austauschbar. Kupferkabel kann mit Glasfaser ausgetauscht werdem, ohne R&#xFC;ckwirkung auf den Data Link Layer.</p>
+<h3 class="mume-header" id="data-link-layer">Data Link Layer</h3>
+
+<p>F&#xFC;r <em>Punkt-Punkt-Verbindungen</em> zwischen genau <em>zwei</em> Teilnehmern:</p>
+<ul>
+<li>Realisieren einer sicheren Verbindung. Z.B. Fehlererkennung/-korrektur</li>
+<li>Aus-/Verpacken der Datenbl&#xF6;cke f&#xFC;r Network Layer</li>
+<li>Flow Control. (nicht schneller Senden als Empfangen)</li>
+</ul>
+<p>Im LAN:</p>
+<ul>
+<li>Adressierung der Teilnehmer (Medium Access Control Address, MAC-Address)</li>
+<li>Steuerung des Zugriffs auf das Medium (falls nicht Full-Duplex)</li>
+</ul>
+<p>Der Transport Layer macht &#xE4;hnliches aber auf Netzwerkebene.</p>
+<h3 class="mume-header" id="network-layer">Network Layer</h3>
+
+<p>Der Network Layer erm&#xF6;glicht den Datenaustausch auf einheitliche Weise. Dazu wird Adressierung und Routing verwendet.</p>
+<p><strong>Verbindungsorientierter Dienst</strong><br>
+Alle Pakete werden &#xFC;ber den gleichen Pfad geroutet. Dazu wird eine Verbindungsnummer gespeichert.</p>
+<ul>
+<li>Zeitverlust und Zusatzaufwand f&#xFC;r den Aufbau der Verbindung.</li>
+<li>Geforderte Charakteristik (Durchsatz, Delay, Verlust) besser einhalten</li>
+<li>Reihenfolge der Daten bleibt erhalten</li>
+<li>Lastverteilung durch Wahl der Route</li>
+<li>Jeder Knoten braucht einen Eintrag pro Verbindung</li>
+</ul>
+<p><strong>Verbindungsloser Dienst (Datagram)</strong><br>
+Wie Briefpost. Das Paket wird unabh&#xE4;ngig von anderen Paketen versendet. (Pfad kann gleich sein, muss aber nicht). Jeder Knoten muss wissen an welchen Ausgang das Paket versendet werden soll, damit es das Ziel erreicht =&gt; Routing-Tabelle.</p>
+<p>IP ist ein Beispiel eines verbindunslosen Dienstes.</p>
+<ul>
+<li>bei Unterbruch oder &#xDC;berlastung einfach erneut senden</li>
+<li>Reihenfolge wird falls n&#xF6;tig durch Transport Layer wiederhergestellt</li>
+</ul>
+<h3 class="mume-header" id="transport-layer">Transport Layer</h3>
+
+<p>H&#xF6;chste Schicht des Transportsystems und biete Prozessen des Session Layers einen effizienten Datentransport.<br>
+F&#xFC;r Transit-Knoten (zwischen Anfangs- und Endknoten) wird die Schicht nicht ben&#xF6;tigt.</p>
+<ul>
+<li>User Data Protocol (UDP): verbindungslos, unsicher</li>
+<li>Transmission Control Protocol (TCP): verbindungsorientierter, sicher</li>
+</ul>
+<h3 class="mume-header" id="session-layer">Session Layer</h3>
+
+<p>Auf- und Abbau von Sitzungen<br>
+Falls Transportverbindung zusammenbricht, muss z.B. neue Verbindung hergestellt werden.<br>
+&quot;Verwaltung der Transportschicht&quot;</p>
+<h3 class="mume-header" id="presentation-layer">Presentation Layer</h3>
+
+<p>Stellt Dienste zur Darstellung der zu &#xFC;bertragenen Daten zur Verf&#xFC;gung. Beispiel:</p>
+<ul>
+<li>Codierung von Zeichen von/zu ASCII, Unicode, ISO, etc.</li>
+<li>Fliesskommazahlendarstellung</li>
+</ul>
+<h3 class="mume-header" id="application-layer">Application Layer</h3>
+
+<p>Legt das Bindeglied zur Anwendung fest:</p>
+<ul>
+<li>FTP</li>
+<li>SMTP</li>
+<li>HTTP</li>
+<li>DNS</li>
+</ul>
+<h3 class="mume-header" id="kritik">Kritik</h3>
+
+<p>Aus heutiger Sicht fehlen wichtige Themen wie:</p>
+<ul>
+<li>Daten-Sicherheit und - Verschl&#xFC;sselung</li>
+<li>Hochverf&#xFC;gbarkeit und Redundanz</li>
+<li>Netzwerk-Management (&#xDC;berwachung und Steuerung)</li>
+<li>Zeitsynchronisation</li>
+</ul>
+<p>Diese Punkte lassen sich zwar im OSI-Modell irgendwie unterbringen, wurden aber urspr&#xFC;nglich nicht adressiert.</p>
+<h2 class="mume-header" id="%C3%BCbertragungsmedien">&#xDC;bertragungsmedien</h2>
+
+<p><img src="communication_medium.png" alt="&quot;&#xDC;berblick der &#xDC;bertragungsmedien&quot;"></p>
+<p>Wichtigste Eigenschafen:</p>
+<ul>
+<li>Erreichbare Distanz</li>
+<li>maximale Daten&#xFC;bertragungsrate</li>
+</ul>
+<h3 class="mume-header" id="ausbreitungsgeschwindigkeit">Ausbreitungsgeschwindigkeit</h3>
+
+<p>In Materien (egal ob Glas oder Metall):<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mrow><mi>M</mi><mi>e</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>m</mi></mrow></msub><mo>=</mo><mn>20</mn><msup><mn>0</mn><mo mathvariant="normal">&#x2032;</mo></msup><mn>000</mn><mtext>&#xA0;</mtext><mi>k</mi><mi>m</mi><mi mathvariant="normal">/</mi><mi>s</mi><mo>&#x2248;</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mi>c</mi></mrow><annotation encoding="application/x-tex">C_{Medium} = 200&apos;000 \ km/s \approx \frac{2}{3}c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span><span class="mord mathit mtight">e</span><span class="mord mathit mtight">d</span><span class="mord mathit mtight">i</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">m</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2032;</span></span></span></span></span></span></span></span></span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mspace">&#xA0;</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mord mathit">m</span><span class="mord">/</span><span class="mord mathit">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2248;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathit">c</span></span></span></span></p>
+<h3 class="mume-header" id="signald%C3%A4mpfung-und-d%C3%A4mpfungsbelag">Signald&#xE4;mpfung und D&#xE4;mpfungsbelag</h3>
+
+<p>Die Signald&#xE4;mpfung ist die Leistungsabnahme eines Signals und beschr&#xE4;nkt die erreichbare Distanz.</p>
+<p><img src="signal_damping.png" alt="&quot;Signald&#xE4;mpfung&quot;"></p>
+<p>Signald&#xE4;mpfung in Dezibel und Eingangsleistung <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">P_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, Ausgangsleistung <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">P_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>Signald&#xE4;mpfung <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>d</mi><mi>B</mi><mo>]</mo><mo>=</mo><mn>10</mn><mo>&#x22C5;</mo><mi>log</mi><mo>&#x2061;</mo><mo>(</mo><mfrac><msub><mi>P</mi><mn>1</mn></msub><msub><mi>P</mi><mn>2</mn></msub></mfrac><mo>)</mo></mrow><annotation encoding="application/x-tex">[dB] = 10 \cdot \log(\frac{P_1}{P_2})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathit">d</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.3335309999999998em;vertical-align:-0.44509999999999994em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8884309999999999em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.13889em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.13889em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></p>
+<p>Mittels Spannung:</p>
+<p>Signald&#xE4;mpfung <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>d</mi><mi>B</mi><mo>]</mo><mo>=</mo><mn>2</mn><mo>&#x22C5;</mo><mn>10</mn><mo>&#x22C5;</mo><mi>log</mi><mo>&#x2061;</mo><mo>(</mo><mfrac><msub><mi>U</mi><mn>1</mn></msub><msub><mi>U</mi><mn>2</mn></msub></mfrac><mo>)</mo></mrow><annotation encoding="application/x-tex">[dB] = 2 \cdot 10 \cdot \log(\frac{U_1}{U_2})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathit">d</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.3335309999999998em;vertical-align:-0.44509999999999994em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8884309999999999em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.10903em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.10903em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></p>
+<p><strong>D&#xE4;mpfungsbelag</strong><br>
+Signald&#xE4;mpfung pro Distanz <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>d</mi><mi>B</mi><mi mathvariant="normal">/</mi><mn>100</mn><mi>m</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[dB / 100m]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathit">d</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord">/</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord mathit">m</span><span class="mclose">]</span></span></span></span> oder <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>d</mi><mi>B</mi><mi mathvariant="normal">/</mi><mi>k</mi><mi>m</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[dB / km]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathit">d</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord">/</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mord mathit">m</span><span class="mclose">]</span></span></span></span></p>
+<p><img src="signal_damping_2.png" alt="&quot;Signald&#xE4;mpfung&quot;"></p>
+<h3 class="mume-header" id="koaxialkabel">Koaxialkabel</h3>
+
+<p>Verwendung: Punkt-Punkt-Verbindungen Hochgeschwindigkeitsnetz (10, 40, 100 GBit/s)</p>
+<ul>
+<li>gut f&#xFC;r &#xDC;bertragung hochfrequenten Signalen</li>
+<li>kleiner D&#xE4;mpfungsbelag =&gt; hohe Distanzen</li>
+<li>speziell Twinax-Kabel, Aderpaare einzeln geschirmt</li>
+</ul>
+<h3 class="mume-header" id="twisted-pair">Twisted Pair</h3>
+
+<ul>
+<li>Verdrillte Aderpaare</li>
+<li>Un-/Shielded Twisted Pair, STP vs. UTP</li>
+</ul>
+<p><strong>Schirmung</strong><br>
+<em>x</em>/yTP</p>
+<p><em>x</em> Gesamtschirmung<br>
+<em>y</em> Aderpaarschirmung</p>
+<p>U = ungeschirmt<br>
+F = Folienschirm<br>
+S = Geflechtschirm<br>
+SF = Schirm aus Geflecht und Folie (nur Gesamtschirmung)</p>
+<h4 class="mume-header" id="st%C3%B6rungen">St&#xF6;rungen</h4>
+
+<p>St&#xF6;rungen von Datenleitungen werden als <em>&#xDC;bersprechen oder Nebensprechen (Crosstalk)</em><br>
+bezeichnet.</p>
+<p><strong>Differenzverst&#xE4;rker</strong><br>
+gegen kapazitive Kopplung<br>
+<img src="Differenzverst%C3%A4rker.png" alt="&quot;Differenzverst&#xE4;rker&quot;"></p>
+<p><em>Induktiv eingekoppelte St&#xF6;rungen</em> k&#xF6;nnen mit Differenzverst&#xE4;rker oder Schirmen nicht beseitigt werden, da die St&#xF6;rungen ein komplement&#xE4;res Signal erzeugen.</p>
+<p>Durch die Verdrillung kann dies aber minimiert werden.<br>
+<em>Bilder n&#xF6;tig?</em></p>
+<h4 class="mume-header" id="kabelkategorien-und-stecker">Kabelkategorien und Stecker</h4>
+
+<ul>
+<li>Kategorie 1-4: F&#xFC;r Telefon und Modem nicht moderne LAN (0.4/4/16/20MHz Bandbreite)</li>
+<li>Kategorie 5: Weit verbreitet und akzeptiert. (100 Mhz, 1 Gbit/s, 100 m)</li>
+<li>Kategorie 6: 250 MHz f&#xFC;r Gigabit Ethernet</li>
+<li>Kategorie 7: 600 MHz 10 GBit/s, (spezielle Stecker und S/FTP Kabel)</li>
+</ul>
+<p>Praxistipps Geb&#xE4;udeverkabelung</p>
+<ul>
+<li>Enden mit Abschlusskappen versehen</li>
+<li>Einhaltung der Lagerungs- und Verlegetemperaturen</li>
+<li>Einhalten von zul&#xE4;ssigen Biegeradien und Zugkr&#xE4;ften</li>
+<li>Kabel nicht verdrehen oder quetschen</li>
+<li>Einsatz geeigneter Werkzeuge</li>
+</ul>
+<p><strong>Pin-Layout des RJ45-Steckers und Bezeichnung der Aderpaare</strong></p>
+<img src="rj45.png?0.4211963498504554" class="asdf">
+<h3 class="mume-header" id="lichtwellenleiter">Lichtwellenleiter</h3>
+
+<ul>
+<li>Vollst&#xE4;ndige Unempfindlichkeit gegen elektromagnetische St&#xF6;rungen</li>
+<li>Kleine Signald&#xE4;mpfung und somit grosse Distanzen</li>
+<li>Grosse Bandbreiten und somit grosse &#xDC;bertragungsraten</li>
+</ul>
+<p>Brechungsindex des Kerns muss leicht h&#xF6;her sein las der des Mantels.<br>
+Z.B. 1.50 und 1.48.</p>
+<p><strong>Brechung und Totalreflexion</strong></p>
+<p><img src="totalreflexion.png" alt=""></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>&#x22C5;</mo><mi>sin</mi><mo>&#x2061;</mo><mo>(</mo><mi>&#x3B1;</mi><mo>)</mo><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mo>&#x22C5;</mo><mi>sin</mi><mo>&#x2061;</mo><mo>(</mo><mi>&#x3B2;</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">n_1 \cdot \sin(\alpha) = n_2 \cdot \sin(\beta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.59445em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.59445em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05278em;">&#x3B2;</span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>&#x3B1;</mi><mo>=</mo><mi>arcsin</mi><mo>&#x2061;</mo><mo>(</mo><mi>sin</mi><mo>&#x2061;</mo><mo>(</mo><mi>&#x3B2;</mi><mo>)</mo><mo>&#x22C5;</mo><mfrac><msub><mi>n</mi><mn>2</mn></msub><msub><mi>n</mi><mn>1</mn></msub></mfrac><mo>)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \alpha = \arcsin(\sin(\beta) \cdot \frac{n_2}{n_1})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">arcsin</span><span class="mopen">(</span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05278em;">&#x3B2;</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.94356em;vertical-align:-0.8360000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1075599999999999em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></p>
+<p>Totalreflexion wenn <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B2;</mi><mo>&#x2265;</mo><mn>90</mn><mi mathvariant="normal">&#xB0;</mi></mrow><annotation encoding="application/x-tex">\beta \ge 90 \degree</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathit" style="margin-right:0.05278em;">&#x3B2;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2265;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">9</span><span class="mord">0</span><span class="mord">&#xB0;</span></span></span></span></p>
+<p><strong>Einteilung LWL</strong></p>
+<p><img src="einteilung_lwl.png" alt=""></p>
+<p>D&#xE4;mpfung durch Absorption, Dispersion = Verzerrung des Signals</p>
+<p><strong>Multimode Glasfaser</strong><br>
+Stufen- vs. Gradientenfaser<br>
+TODO</p>
+<p><strong>Monomode Glasfaser</strong><br>
+Sehr kleinen Kern. Unterdr&#xFC;ckt fasst alle Moden bis auf einen. (10 Gbit/s, 80km; 100 Gbit/s, 40km)</p>
+<h3 class="mume-header" id="strukturierte-geb%C3%A4udeverkabelung">Strukturierte Geb&#xE4;udeverkabelung</h3>
+
+<p>TODO</p>
+<h2 class="mume-header" id="physical-layer-1">Physical Layer</h2>
+
+<ul>
+<li>elektrische Eigenschaften (Pegel, Zeiten, etc.)</li>
+<li>Codierung (Return to Zero, non return to Zero, AMI, Manchester, FSK, etc.)</li>
+<li>mechanische Eigenschaften (Stecker, Pinbelegung, etc.)</li>
+</ul>
+<p>Faktoren welche den Physical Layer beeinflussen:</p>
+<ul>
+<li>&#xDC;bertragungsmedium</li>
+<li>Kopplung der Kommunikationspartner</li>
+<li>&#xDC;bertragungsverfahren</li>
+</ul>
+<h3 class="mume-header" id="kopplung-der-kommunikationspartner">Kopplung der Kommunikationspartner</h3>
+
+<ul>
+<li>Simplex: nur eine Richtung (z.B. Radio, TV)</li>
+<li>Halbduplex: Beide Richtungen aber nicht gleichzeitig (z.B. Funkger&#xE4;t)</li>
+<li>Vollduplex: Beide Richtungen 1 Kanal, beide gleichzeitig, z.B. Telefon</li>
+</ul>
+<p>nicht scharf: Zeitmultiplex ist technisch Halbduplex, aber wirkt wie Vollduplex.</p>
+<p>Verbindungsarten:</p>
+<ul>
+<li>Punkt-Punkt: direkte Verbindung A-B (PC und USB-Drucker)</li>
+<li>Shared Medium: Mehrere Knoten &#xFC;ber gleiches Medium (Bus, LAN)</li>
+</ul>
+<h3 class="mume-header" id="%C3%BCbertragungsverfahren">&#xDC;bertragungsverfahren</h3>
+
+<ul>
+<li>parallele &#xDC;bertragung: Mehrere Leitungen, gleichzeitig (parallele) Signale &#xFC;bertragen</li>
+<li>seriell synchron und asynchron</li>
+</ul>
+<p><strong>Serielle asynchrone &#xDC;bertragung</strong></p>
+<ul>
+<li>kein Takt f&#xFC;r Bitsynchronisation</li>
+<li>Empf&#xE4;nger justiert sein Takt andauernd, tastet nach Stopbit ab f&#xFC;r n&#xE4;chstes Startbit</li>
+<li>Bitrate, Anzahl Datenbits und Anzahl Stopbits vorher vereinbaren</li>
+</ul>
+<p><img src="seriell_asynchron.png" alt=""></p>
+<ul>
+<li>sehr einfache Implementation</li>
+<li>Start/Stopbit verringern aber Nettobitrate</li>
+<li>nicht sehr robust (Bitfehler)</li>
+</ul>
+<p><strong>Serielle synchrone &#xDC;bertragung</strong></p>
+<ul>
+<li>Empf&#xE4;nger synchron mit Sender</li>
+<li>hohe Datenraten (keine Start- / Stopbits)</li>
+<li>Takt muss mitgegeben werden (separat oder Codierverfahren, um Takt zu extrahieren)</li>
+<li>Data Link Layer trennt die einzelnen Bytes</li>
+</ul>
+<h3 class="mume-header" id="leitungscodes">Leitungscodes</h3>
+
+<ul>
+<li>physikalisch vorhandene Bandbreite effizient nutzen</li>
+<li>unabh&#xE4;ngig von &#xFC;bertragenen Daten eine zuverl&#xE4;ssige Taktr&#xFC;ckgewinnung erm&#xF6;glichen</li>
+<li>m&#xF6;glichst gleichspannungsfrei sein</li>
+</ul>
+<p>Leitungseinrichtung codiert die Daten in den Leitungscode.<br>
+Der Empf&#xE4;nger decodiert und kann Taktr&#xFC;ckgewinnung machen.</p>
+<p><strong>Alternate Mark Inversion (AMI)</strong><br>
+Logischer Wert 0 mit 0 Volt.<br>
+Logischer Wert 1 alternierend mit positiver/negativer Spannung</p>
+<p><strong>HDB3 mit 000V-Sequenzen</strong><br>
+AMI aber vier Nullen werden zu 0001 (1 genau gleich, nicht alternierend, wie das letzte 1). Dies ist f&#xFC;r die Taktr&#xFC;ckgewinnung und wird vom Empf&#xE4;nger wieder zu 0000 konvertiert.</p>
+<p>Da dieser Code bei langen Nullfolgen nicht gleichspannungsfrei ist, wird eine B00V-Sequenz verwendet:<br>
+Wenn die gesendete Anzahl von Einsen seit der letzten Regelverletzung gerade ist, sende 1001.</p>
+<p><img src="hdb_code.png" alt=""></p>
+<h3 class="mume-header" id="nutzung-der-bandbreite">Nutzung der Bandbreite</h3>
+
+<p>&#xDC;bertragunsrate h&#xE4;ngt von folgendem ab:</p>
+<ul>
+<li>Bandbreite der &#xDC;bertragunsstrecke</li>
+<li>St&#xE4;rke des Signals vgl. mit St&#xF6;rungen</li>
+</ul>
+<p><strong>Symbolrate (Nyquist Rate)</strong><br>
+Der Empf&#xE4;nger kann anhand des Zustands des &#xDC;bertragungsmediums die &#xFC;bertragene Information<br>
+ermitteln (Dekodierung). Dieser Zustand = <em>Symbol</em></p>
+<p>Anzahl von Zustands&#xE4;nderung pro Zeit = Symbolrate (in Baud)<br>
+!= Bitrate !!!</p>
+<p>Maximale Symbolrate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">f_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">s</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> abh&#xE4;ngig der Nutzbaren Bandbreite <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span> in Hertz.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>s</mi></msub><mo>&#x2264;</mo><mn>2</mn><mi>B</mi></mrow><annotation encoding="application/x-tex">f_s \le 2B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">s</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2264;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span></p>
+<p>ADSL/ISDN wichtig?</p>
+<p><strong>Maximal erreichbare Bitrate (Hartley&apos;s Gesetz)</strong><br>
+Die maximal erreichbare Bitrate ist das Produkt der Symbolrate und dem Informationsgehalt der Symbole.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">M =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span> Anzahl erkennbare Zust&#xE4;nde<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">A =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span> Gr&#xF6;sse des Signals (Amplitude)<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x394;</mi><mi>V</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">\Delta V =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">&#x394;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span> Ungenauigkeit des Empf&#xE4;ngers bzw. St&#xF6;rungen<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mi>S</mi></msub><mo>=</mo></mrow><annotation encoding="application/x-tex">I_S =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">S</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span> Informationsgehalt eines Symbols<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">R =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span> Maximal erreichbare Bitrate</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>M</mi><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mi>A</mi><mrow><mi mathvariant="normal">&#x394;</mi><mi>V</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle M = 1 + \frac{A}{\Delta V}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">&#x394;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">A</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mi>S</mi></msub><mo>=</mo><msub><mi>log</mi><mo>&#x2061;</mo><mn>2</mn></msub><mo>(</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">I_S = \log_2(M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">S</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.20696799999999996em;"><span style="top:-2.4558600000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>R</mi><mo>&#x2264;</mo><mn>2</mn><mi>B</mi><mo>&#x22C5;</mo><msub><mi>log</mi><mo>&#x2061;</mo><mn>2</mn></msub><mo>(</mo><mi>M</mi><mo>)</mo><mo>=</mo><mn>2</mn><mi>B</mi><mo>&#x22C5;</mo><msub><mi>log</mi><mo>&#x2061;</mo><mn>2</mn></msub><mo>(</mo><mn>1</mn><mo>+</mo><mfrac><mi>A</mi><mrow><mi mathvariant="normal">&#x394;</mi><mi>V</mi></mrow></mfrac><mo>)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle R \le 2B \cdot \log_2(M) = 2B \cdot \log_2(1 + \frac{A}{\Delta V})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2264;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.20696799999999996em;"><span style="top:-2.4558600000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.20696799999999996em;"><span style="top:-2.4558600000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">&#x394;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">A</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></p>
+<p>Z.B. AMI-Code<br>
+Dreiwertig (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>U</mi><mo>+</mo></msub><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><msub><mi>U</mi><mo>&#x2212;</mo></msub></mrow><annotation encoding="application/x-tex">U_+, 0, U_-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.891661em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.25833100000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">&#x2212;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span>) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x21D2;</mo><msub><mi>log</mi><mo>&#x2061;</mo><mn>2</mn></msub><mo>(</mo><mn>3</mn><mo>)</mo><mo>=</mo><mn>1.58</mn><mtext>&#xA0;</mtext><mi>B</mi><mi>i</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Rightarrow \log_2(3) = 1.58\ Bit</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">&#x21D2;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.20696799999999996em;"><span style="top:-2.4558600000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">3</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">5</span><span class="mord">8</span><span class="mspace">&#xA0;</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">i</span><span class="mord mathit">t</span></span></span></span><br>
+Pro Schritt wird aber nur 1 Bit &#xFC;bertragen, d.h. Effizienz von <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mn>1</mn><mn>1.58</mn></mfrac><mo>=</mo><mn>63</mn><mtext>&#xA0;</mtext><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\frac{1}{1.58} = 63\ \%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">.</span><span class="mord mtight">5</span><span class="mord mtight">8</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord">6</span><span class="mord">3</span><span class="mspace">&#xA0;</span><span class="mord">%</span></span></span></span></p>
+<p><strong>Gesetz von Shannon-Hartley</strong><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.07153em;">C</span></span></span></span> | Kanalkapazit&#xE4;t<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span> | Bandbreite<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span> | Signalleistung<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span> | Rauschleistung</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>C</mi><mo>=</mo><mi>B</mi><mo>&#x22C5;</mo><msub><mi>log</mi><mo>&#x2061;</mo><mn>2</mn></msub><mo>(</mo><mn>1</mn><mo>+</mo><mfrac><mi>S</mi><mi>N</mi></mfrac><mo>)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle C = B \cdot \log_2(1 + \frac{S}{N})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.20696799999999996em;"><span style="top:-2.4558600000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></p>
+<p>Faktor 2 fehlt, da <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>S</mi><mi>N</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{S}{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">S</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> ein Verh&#xE4;ltnis von Leistungen ist, die quadratisch mit den Spannungen zusammenh&#xE4;ngen.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>M</mi><mo>=</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mi>S</mi><mi>N</mi></mfrac></mrow></msqrt></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle M = \sqrt{1 + \frac{S}{N}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.44em;vertical-align:-0.7689599999999999em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.67104em;"><span class="svg-align" style="top:-4.4em;"><span class="pstrut" style="height:4.4em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.6310400000000005em;"><span class="pstrut" style="height:4.4em;"></span><span class="hide-tail" style="min-width:1.02em;height:2.48em;"><svg width="400em" height="2.48em" viewBox="0 0 400000 2592" preserveAspectRatio="xMinYMin slice"><path d="M424,2478c-1.3,-0.7,-38.5,-172,-111.5,-514c-73,
+-342,-109.8,-513.3,-110.5,-514c0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,
+25c-5.7,9.3,-9.8,16,-12.5,20s-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,
+-13s76,-122,76,-122s77,-121,77,-121s209,968,209,968c0,-2,84.7,-361.7,254,-1079
+c169.3,-717.3,254.7,-1077.7,256,-1081c4,-6.7,10,-10,18,-10H400000v40H1014.6
+s-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185c-2,6,-10,9,-24,9
+c-8,0,-12,-0.7,-12,-2z M1001 80H400000v40H1014z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.7689599999999999em;"><span></span></span></span></span></span></span></span></span></p>
+<h2 class="mume-header" id="data-link-layer-1">Data Link Layer</h2>
+
+<p>Bei Punkt-Punkt-Verbindungen:</p>
+<ul>
+<li>Massnahmen zur Fehlererkennung und -korrektur</li>
+<li>Ver- und Auspacken der Frames (Framing)</li>
+<li>Frame-Erkennung</li>
+<li>Flow-Control</li>
+</ul>
+<p>Bei mehreren Teilnehmern:</p>
+<ul>
+<li>Adressierung der Teilnehmer</li>
+<li>Medium Zugriff</li>
+</ul>
+<p><strong>Asynchrone &#xDC;bertragung</strong><br>
+&#xDC;bertragung nur bei Bedarf. Startbits markieren den beginn eines Frames. Pause zwischen Frames.</p>
+<p>Frames bestehen normalerweise aus Header, Daten, und Pr&#xFC;fbits:</p>
+<p><img src="frame.png" alt=""></p>
+<p><strong>Synchrone &#xDC;bertragung</strong><br>
+Laufend Frames senden ohne Unterbruch. Leer-Frames, wenn keine zu sendenden Daten vorhanden.<br>
+Es m&#xFC;ssen im Gegensatz zur asynchronen &#xDC;bertragung auch die Byte-Grenzen erkannt werden.</p>
+<p>Start- und End-Flags f&#xFC;r Anfang und Ende eines Frames. (Spezielles Bitmuster)<br>
+Bitstopfen, damit das Bitmuster nicht in der Mitte des Frames auftritt.<br>
+Nach 5 aufeinanderfolgenden Einsen eine Null.</p>
+<p><img src="framing_synchron.png" alt=""></p>
+<h3 class="mume-header" id="frame-l%C3%A4nge">Frame-L&#xE4;nge</h3>
+
+<p>Je l&#xE4;nger die Frames, desto besser die Nettobitrate.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mtext>Nettobitrate</mtext><mo>=</mo><mtext>Bruttobitrate</mtext><mo>&#x22C5;</mo><mfrac><mtext>Nutzdaten</mtext><mrow><mtext>Nutzdaten</mtext><mo>+</mo><mtext>Header</mtext></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \text{Nettobitrate} = \text{Bruttobitrate} \cdot \frac{\text{Nutzdaten}}{\text{Nutzdaten} + \text{Header}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">Nettobitrate</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">Bruttobitrate</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.14077em;vertical-align:-0.7693300000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Nutzdaten</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord text"><span class="mord">Header</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Nutzdaten</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693300000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+<p>aber:</p>
+<ul>
+<li>Wahrscheinlichkeit eines &#xDC;bertragungsfehlers ist gr&#xF6;sser</li>
+<li>Datenverlust gr&#xF6;sser, wenn Fehler auftritt</li>
+<li>Wahrscheinlichkeit, dass ein Fehler nicht entdeckt wird ist gr&#xF6;sser</li>
+<li>Jitter: Variation der Zeitabst&#xE4;nde zwischen Frames h&#xF6;her</li>
+</ul>
+<p><strong>Jitter</strong><br>
+Lange Frames blockieren die &#xDC;bertragungsstrecke f&#xFC;r l&#xE4;ngere Zeit. Problem z.B. bie Multimedia Applikationen.<br>
+Unregelm&#xE4;ssige Updates.</p>
+<p><strong>Durchsatz</strong><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>Frame-Erfolgswahrscheinlichkeit</mtext><mo>=</mo><mo>(</mo><mn>1</mn><mi mathvariant="normal">&#x2212;</mi><msub><mi>p</mi><mi>e</mi></msub><msup><mo>)</mo><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">\text{Frame-Erfolgswahrscheinlichkeit} = (1 &#x2212; p_e)^N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">Frame-Erfolgswahrscheinlichkeit</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">&#x2212;</span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">e</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>Frame-Fehlerwahrscheinlichkeit</mtext><mo>=</mo><mn>1</mn><mo>&#x2212;</mo><mo>(</mo><mn>1</mn><mi mathvariant="normal">&#x2212;</mi><msub><mi>p</mi><mi>e</mi></msub><msup><mo>)</mo><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">\text{Frame-Fehlerwahrscheinlichkeit} = 1 - (1 &#x2212; p_e)^N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">Frame-Fehlerwahrscheinlichkeit</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">&#x2212;</span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">e</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span></span></span></span></p>
+<p><img src="durchsatz_frame_laenge.png" alt=""></p>
+<p>Optimaler Durchsatz bei BER <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>p</mi><mi>e</mi></msub><mo>=</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>&#x2212;</mo><mn>4</mn></mrow></msup></mrow><annotation encoding="application/x-tex">p_e = 10^{-4}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">e</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span> und Header-L&#xE4;nge <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>200</mn><mtext>&#xA0;Bit</mtext></mrow><annotation encoding="application/x-tex">200 \text{ Bit}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span><span class="mord text"><span class="mord">&#xA0;Bit</span></span></span></span></span> bei Frame-L&#xE4;nge <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1500</mn><mtext>&#xA0;Bit</mtext></mrow><annotation encoding="application/x-tex">1500 \text{ Bit}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span><span class="mord text"><span class="mord">&#xA0;Bit</span></span></span></span></span></p>
+<p>Optimale Frame-L&#xE4;nge <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mo>&#x2248;</mo><msqrt><mfrac><mi>H</mi><msub><mi>p</mi><mi>e</mi></msub></mfrac></msqrt></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \approx \sqrt{\frac{H}{p_e}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.48312em;vertical-align:0em;"></span><span class="mrel">&#x2248;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.04em;vertical-align:-1.1661799999999998em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8738200000000003em;"><span class="svg-align" style="top:-5em;"><span class="pstrut" style="height:5em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">e</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804400000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.8338200000000002em;"><span class="pstrut" style="height:5em;"></span><span class="hide-tail" style="min-width:1.02em;height:3.08em;"><svg width="400em" height="3.08em" viewBox="0 0 400000 3240" preserveAspectRatio="xMinYMin slice"><path d="M473,2793c339.3,-1799.3,509.3,-2700,510,-2702
+c3.3,-7.3,9.3,-11,18,-11H400000v40H1017.7s-90.5,478,-276.2,1466c-185.7,988,
+-279.5,1483,-281.5,1485c-2,6,-10,9,-24,9c-8,0,-12,-0.7,-12,-2c0,-1.3,-5.3,-32,
+-16,-92c-50.7,-293.3,-119.7,-693.3,-207,-1200c0,-1.3,-5.3,8.7,-16,30c-10.7,
+21.3,-21.3,42.7,-32,64s-16,33,-16,33s-26,-26,-26,-26s76,-153,76,-153s77,-151,
+77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,104,606z
+M1001 80H400000v40H1017z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.1661799999999998em;"><span></span></span></span></span></span></span></span></span> wobei <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">H =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span> Header-L&#xE4;nge</p>
+<h3 class="mume-header" id="fehlererkennung-und-korrektur">Fehlererkennung und -korrektur</h3>
+
+<ul>
+<li>Backward Error Correction: Empf&#xE4;nger erkennt Fehler, fordert Retransmission. BER klein</li>
+<li>Forward Error Correction: Empf&#xE4;nger erkennt und korrigiert Fehler. BER gr&#xF6;sser</li>
+</ul>
+<p><strong>Erkennung</strong><br>
+Pr&#xFC;fbitgenerator CRC stuff</p>
+<p>Erkennbare Fehler <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathit">e</span></span></span></span> mit einer Hamming-Distanz <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathit">h</span></span></span></span>:</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mo>=</mo><mi>h</mi><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">e = h - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathit">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathit">h</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
+<p>Other Error stuff TODO</p>
+<h3 class="mume-header" id="flow-control">Flow control</h3>
+
+<ol>
+<li>Sender produziert mehr Daten als Empf&#xE4;nger verarbeiten kann =&gt; Problem</li>
+<li>Empf&#xE4;nger sendet Stopp-Meldung</li>
+<li>Wenn die untere Limite wieder erreicht wurde, sendet der Empf&#xE4;nger eine Start-Meldung</li>
+</ol>
+<p>Es gibt auch die Methode jeweils eine &quot;Quittung&quot; zur&#xFC;ckzuschicken (wie bei TCP)</p>
+<p>Wichtig ist, dass der Data Link Layer alleine das Problem nicht l&#xF6;sen kann, da die Daten nochmals gesendet und somit generiert werden m&#xFC;ssen.</p>
+<h3 class="mume-header" id="medium-zugriff">Medium Zugriff</h3>
+
+<p>Mehrere Verfahren f&#xFC;r Media Access Control.</p>
+<p><strong>Master/Slave-Verfahren</strong></p>
+<ol>
+<li>Master fragt zyklisch jeden Slave an.</li>
+<li>Slave antwortet an Master.</li>
+<li>Master speichert Daten ab</li>
+<li>Master sendet an Slave.</li>
+</ol>
+<p>Vorteile:</p>
+<ul>
+<li>sehr einfach Slaves an-/abzuh&#xE4;ngen</li>
+<li>Zeit zwischen Slave-Zugriffen voraussehbar (deterministisch)</li>
+</ul>
+<p>Nachteil ist, dass die Transferzeit hoch ist, da immer &#xFC;ber den master gesendet werden muss.</p>
+<p><strong>Token Passing</strong><br>
+Ein Token wird zwischen gleichberechtigten Knoten in festgelegter Reihenfolge weitergereicht.<br>
+Man darf nur senden, wenn man den Token hat.</p>
+<p>Vorteil: deterministisch und besser wie Slave, weil die Knoten direkt miteinander kommunizieren k&#xF6;nnen.<br>
+Nachteile:</p>
+<ul>
+<li>Relativ aufw&#xE4;ndig Knoten hinzuzuf&#xFC;gen oder abzubauen.</li>
+<li>Was wenn Token verloren geht?</li>
+</ul>
+<p>Anwendung: Token-Ring</p>
+<p>Kann auch Frame Passing verwenden:</p>
+<ol>
+<li>Master schickt ein &quot;leeres&quot; Frame. F&#xFC;r die Slaves ist jeweils Platz im Frame reserviert.</li>
+<li>Slave erh&#xE4;lt das Frame, f&#xFC;llt Daten ein</li>
+<li>Sendet das Frame weiter (an n&#xE4;chsten Knoten)</li>
+</ol>
+<p><strong>Zeitgesteurter Zugriff</strong><br>
+Analog Taktfahrplan im Bahnnetz. Vorteil: sehr fair. Nachteil: ist Planung. Fahrplan muss in jedem Knoten vorhanden sein.</p>
+<p><strong>Carrier Sense Multiple Access (CSMA)</strong><br>
+Alle Knoten gleichberechtigt</p>
+<ol>
+<li>Knoten schaut ob Bus frei.</li>
+<li>Wenn frei, dann senden
+<ol>
+<li>Sonst, warten, bis frei ist</li>
+</ol>
+</li>
+</ol>
+<p>Vorteil: kein Master, keine Konfiguration/planung<br>
+Nachteil: nicht deterministisch, und Was wenn gleichzeitig senden? Was wenn einzelner Knoten immer sendet?</p>
+<p><strong>Carrier Sense Multiple Access / Collision Detection (CSMA/CD)</strong></p>
+<ol>
+<li>Knoten erkennen Kollisionen</li>
+<li>Warten zuf&#xE4;llige Zeit</li>
+<li>Senden erneut</li>
+</ol>
+<p><strong>Carrier Sense Multiple Access with Collision Resolution (CSMA/CR)</strong><br>
+ein Signalpegel wird als dominant definiert und gewinnt im Konfliktfall.<br>
+Der Verliere stellt die Kollision fest und bricht seine &#xDC;bertragung ab.</p>
+<p>Keine &#xDC;bertragungskapazit&#xE4;t geht verloren, aber es muss innerhalb einer Bitzeit erfolgen.</p>
+<h3 class="mume-header" id="layer-2-protokolle">Layer-2-Protokolle</h3>
+
+<p>Folgende Layer-2-Protokolle werden eingesetzt:</p>
+<ul>
+<li>High Level Data Link Control (HDLC)<br>
+Von ISO und ITU genormtes Protokoll, das in vielen Anwendungen anzutreffen ist.</li>
+<li>Point to Point Protocol (PPP = HDLC-Variante)<br>
+Protokoll zur Anbindung von abgesetzten Teilnehmern an einen Internet Provider.</li>
+</ul>
+<h2 class="mume-header" id="lokale-netzwerke-lan">Lokale Netzwerke (LAN)</h2>
+
+<p>Ein LAN ist ein r&#xE4;umlich begrenztes Netzwerk.</p>
+<h3 class="mume-header" id="topologie">Topologie</h3>
+
+<p>Es gibt verschiedene Topologien. Heutzutage werden jedoch meist Baumtopologien eingesetzt.</p>
+<p><strong>Bustopologie</strong><br>
+Knoten sind passiv am Medium angeschlossen und werden nur im Sendefall aktiv.</p>
+<p><strong>Linientopologie</strong><br>
+Benachbarte Knoten sind mit Medium verbunden. In der Automation z.B. sehr beliebt.<br>
+Problem wenn einzelner Knoten ausf&#xE4;llt: A - B - C =&gt; A - <s>B</s> - C, a kann nicht mehr C erreichen und umgekehrt.</p>
+<p><strong>Ringtopologie</strong><br>
+Wie Linientopologie - einfach Enden zusammenh&#xE4;ngen<br>
+Doppel-Ringtopologie auch gut, als Fallback zum einfachen Ring, falls was ausf&#xE4;llt.</p>
+<p><strong>Sterntopologie</strong><br>
+Knoten sind direkt an einen Verteiler (Hub/Switch) angeschlossen.<br>
+Knoten k&#xF6;nnen einzeln ausfallen, aber Verteiler darf nicht.</p>
+<p><strong>Baumtopologie</strong><br>
+Wie Sterntopologie aber Verteiler mit anderen Verteilern verbinden.</p>
+<h3 class="mume-header" id="%C3%BCbertragungsarten">&#xDC;bertragungsarten</h3>
+
+<p>3 Gruppen</p>
+<ul>
+<li>Unicast-&#xDC;bertragung<br>
+Transfer von Quelle zu <em>genau einem</em> Ziel im Netzwerk.</li>
+<li>Broadcast-&#xDC;bertragung<br>
+Transfer von Quelle zu <em>allen</em> Knoten eines Netzwerks. (Netzwerk wird belastet, auch wenn Pakete f&#xFC;r einige Knoten nicht wichtig sind)</li>
+<li>Multicast-&#xDC;bertragung<br>
+Transfer an <em>eine bestimmte Gruppe</em> von Knoten im Netzwerk. Sender versieht Paket mit Multicast-Adresse. Protokoll n&#xF6;tig, um sich in eine Gruppe ein/austragen zu k&#xF6;nnen.</li>
+</ul>
+<h3 class="mume-header" id="normung-lan-und-man">Normung LAN und MAN</h3>
+
+<p>IEEE entwickelt und normiert LANs und MANs.</p>
+<p><img src="IEEE_802.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>ANSI/IEEE</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>802.3</td>
+<td>Ethernet</td>
+</tr>
+<tr>
+<td>802.11</td>
+<td>Wireless LANs (WiFi)</td>
+</tr>
+<tr>
+<td>802.15</td>
+<td>Wireless PANs (Bluetooth, ZigBee etc.)</td>
+</tr>
+<tr>
+<td>802.16</td>
+<td>Broadband Wireless MANs (WiMAX)</td>
+</tr>
+<tr>
+<td>802.17</td>
+<td>Resilient Packet Rings (MAN)</td>
+</tr>
+<tr>
+<td>802.20</td>
+<td>Mobile Broadband Wireless Access</td>
+</tr>
+<tr>
+<td>802.22</td>
+<td>Wireless Regional Area Networks</td>
+</tr>
+</tbody>
+</table>
+<p>Ethernet von 10 Mbit/s - 100 Gbit/s</p>
+<p><img src="IEEE_802.png" alt=""></p>
+<p><img src="ethernet_technologien.png" alt=""></p>
+<h3 class="mume-header" id="shared-ethernet">Shared Ethernet</h3>
+
+<p>Im Standard erstmals mit 10 MBit/s.</p>
+<p><strong>Physical Layer 10BASE5 und 10BASE2</strong><br>
+Bis 500m, Koaxialkabel wird angebohrt und Transceiver befestigt.<br>
+Von Transceiver Kabel zum Knoten.</p>
+<p>Danach 10BASE2, welches mit BNC-T-St&#xFC;cken arbeitet und billiger ist.<br>
+Die BNC-Stecker sind aber empfindlich und haben sich nicht bew&#xE4;hrt.</p>
+<p><strong>Leitungscodierung und Manchester-Code</strong><br>
+keine Tr&#xE4;gerfrequenz, 1 Symbol alle 100ns</p>
+<p>Beim Manchestercode werden die Flanken und nicht die Zust&#xE4;nde gelesen.</p>
+<p><img src="manchester_code.png" alt=""></p>
+<p>=&gt; einfache Taktr&#xFC;ckgewinnung, ben&#xF6;tigt aber h&#xF6;here Frequenz (10 Mbit/s &lt;&gt; 10 MHz, Doppelte vom theoretischen Minimum)</p>
+<p>Asymmetrisches Signalpegel von <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mtext>&#xA0;</mtext><mi>V</mi></mrow><annotation encoding="application/x-tex">0\ V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace">&#xA0;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span> und <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2212;</mo><mn>2</mn><mtext>&#xA0;</mtext><mi>V</mi></mrow><annotation encoding="application/x-tex">-2\ V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord">&#x2212;</span><span class="mord">2</span><span class="mspace">&#xA0;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span>. Mit symmetrischen Pegeln ist er gleichstromfrei (10BASE-T)</p>
+<p><strong>Preamble und SFD</strong></p>
+<p><img src="bitsynchronisation_preamble_sfd.png" alt=""></p>
+<p><strong>Senden (ohne Kollision)</strong></p>
+<ol>
+<li>Warten bis &#xDC;bertragungskanal frei</li>
+<li>Frame an Physical Layer &#xFC;bergeben
+<ol>
+<li>Preamble und SFD senden</li>
+<li>Daten senden</li>
+<li>Kontrolle des Signalpegel auf Kollisionen (&#xDC;berlagerung Sendesignale) und Mitteilung an Data Link Layer</li>
+</ol>
+</li>
+<li>Meldung an &#xFC;bergeordnete Schichten</li>
+</ol>
+<p><img src="ueberlagerung_sendesignale.png" alt=""></p>
+<p><strong>Empfang (ohne Kollision)</strong></p>
+<ol>
+<li>Nicht sendende Knoten melden Data Link Layer, nicht zu senden.</li>
+<li>Alle Knoten werden zu Empf&#xE4;nger und &#xFC;bersetzen Manchester-Code</li>
+<li>Falls Zieladresse der eigene Knoten =&gt; Datenteil an Data Link Layer &#xFC;bergeben</li>
+</ol>
+<p><strong>Empfang (mit Kollision)</strong><br>
+Nur zu Beginn der &#xDC;bertragung.</p>
+<ol>
+<li>Kollision meldet Physical Layer mittels &quot;collision detect signal&quot;</li>
+<li>Jam-Signal (32-Bit, random Inhalt) senden</li>
+<li>Datalink Layer kann durch Pr&#xFC;fsumme falsches Frame unterscheiden</li>
+<li>Sender wartet variable Zeit.</li>
+</ol>
+<p>Zeit zu warten ist ein <em>Vielfaches der Slot-Zeit</em> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">t_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">s</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, die 512 Bitzeiten entspricht:<br>
+10 Mbit/s Ethernet <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mi>s</mi></msub><mo>=</mo><mn>51.2</mn><mi>&#x3BC;</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">t_s = 51.2 \mu s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">s</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">5</span><span class="mord">1</span><span class="mord">.</span><span class="mord">2</span><span class="mord mathit">&#x3BC;</span><span class="mord mathit">s</span></span></span></span>, 100 Mbit/s <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mi>s</mi></msub><mo>=</mo><mn>5.12</mn><mi>&#x3BC;</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">t_s = 5.12 \mu s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">s</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">5</span><span class="mord">.</span><span class="mord">1</span><span class="mord">2</span><span class="mord mathit">&#x3BC;</span><span class="mord mathit">s</span></span></span></span></p>
+<ol>
+<li>Kollision <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>&#x22C5;</mo><msub><mi>t</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">0 \cdot t_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">s</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> oder <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#x22C5;</mo><msub><mi>t</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">1 \cdot t_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">s</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> bei nachfolgenden immer das doppelte der vorherigen.</li>
+</ol>
+<h3 class="mume-header" id="aufbau-ethernet-frames">Aufbau Ethernet-Frames</h3>
+
+<p>LSB vor MSB</p>
+<p><img src="ethernet_frame.png" alt=""></p>
+<p><strong>Destination Address</strong><br>
+MAC-Adresse mit 6 Bytes, weltweit eindeutig</p>
+<p><img src="mac_address.png" alt=""></p>
+<p>3 Bytes: Organizationally Unique Identifier (OUI), Herstellerspezifisch<br>
+3 Bytes: Vom Hersteller bestimmt, muss eindeutig sein</p>
+<p>Ausnahmen sind Multicast- und Broadcast-Adressen</p>
+<p><strong>Source Address</strong><br>
+MAC-Adresse des Senders. Das erste Bit muss 0 sein (Individuelle Adresse)</p>
+<p><strong>Length / Type</strong></p>
+<ul>
+<li>Wert <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2264;</mo><mn>1500</mn></mrow><annotation encoding="application/x-tex">\le 1500</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">&#x2264;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span></span></span></span> gibt die Anzahl von Bytes im Datenfeld &quot;Data&quot; an (ohne F&#xFC;lldaten)</li>
+<li>Wert <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2265;</mo><mn>1536</mn></mrow><annotation encoding="application/x-tex">\ge 1536</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">&#x2265;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">5</span><span class="mord">3</span><span class="mord">6</span></span></span></span> welches h&#xF6;heres Protokoll im Datenfeld ist.</li>
+</ul>
+<p><strong>Data / Pad</strong><br>
+Datenfeld mit Padding auf 64 Bytes wenn kleiner als 46.<br>
+=&gt; minimale Frame-L&#xE4;nge 64 Bytes</p>
+<p><strong>Frame Check Sequence (FCS)</strong><br>
+CRC32 Check Sequence</p>
+<p><strong>Interframe Gap (IFG)</strong><br>
+minimaler zeitlicher Abstand zwischen Frames. Geh&#xF6;rt zum Physical Layer.</p>
+<h3 class="mume-header" id="repeater-und-hubs">Repeater und Hubs</h3>
+
+<p>L&#xE4;nge der Bus-Segmente durch D&#xE4;mpfung limitiert.<br>
+Signalverst&#xE4;rker = Repeater restauriert Amplitude sowie Preamble, Flanken und Jitter.<br>
+Hub = Multiport-Repeater</p>
+<ul>
+<li>Hub sendet Jam-Signal auf allen Segmenten, wenn Kollision entdeckt.</li>
+<li>Hub unterdr&#xFC;ckt Signal falls l&#xE4;nger als 5ms gesendet wird.</li>
+</ul>
+<p><strong>Round Trip Delay</strong><br>
+Ein beliebiger sendender Knoten muss eine Kollision erkennen k&#xF6;nnen, solange er noch am Senden ist.</p>
+<p><strong>Interframe Gap Shrinkage</strong><br>
+Durch Repeater werden die Preamble l&#xE4;nger und der IFG k&#xFC;rzer.</p>
+<p><strong>Collision Domain</strong><br>
+Bereich des Netzwerks in dem eine Kollision erkannt werden kann heisst Collision Domain<br>
+Die Collision Domain darf nur halb so gross sein, wie die Ausdehnung des k&#xFC;rzesten Frames.</p>
+<p><img src="max_distance_collision.png" alt=""></p>
+<p>Die Bedingung f&#xFC;r die Erkennung einer Kollision durch Knoten A ist:<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mrow><mi>f</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>e</mi></mrow></msub><mo>&gt;</mo><mn>2</mn><mo>&#x22C5;</mo><msub><mi>t</mi><mrow><mi>t</mi><mi>r</mi><mi>a</mi><mi>n</mi><mi>s</mi><mi>f</mi><mi>e</mi><mi>r</mi></mrow></msub></mrow><annotation encoding="application/x-tex">t_{frame} \gt 2 \cdot t_{transfer}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9011879999999999em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mord mathit mtight">a</span><span class="mord mathit mtight">m</span><span class="mord mathit mtight">e</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.9011879999999999em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">t</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mord mathit mtight">a</span><span class="mord mathit mtight">n</span><span class="mord mathit mtight">s</span><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span><span class="mord mathit mtight">e</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>Maximale Ausdehenung eines Segments:</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>d</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>&lt;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&#x22C5;</mo><mfrac><msub><mtext>Framesize</mtext><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub><mtext>Bitrate</mtext></mfrac><mo>&#x22C5;</mo><msub><mi>C</mi><mrow><mi>M</mi><mi>e</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>m</mi></mrow></msub></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle d_{max} \lt \frac{1}{2} \cdot \frac{\text{Framesize}_{min}}{\text{Bitrate}} \cdot C_{Medium}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">m</span><span class="mord mathit mtight">a</span><span class="mord mathit mtight">x</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Bitrate</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">Framesize</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">m</span><span class="mord mathit mtight">i</span><span class="mord mathit mtight">n</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x22C5;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span><span class="mord mathit mtight">e</span><span class="mord mathit mtight">d</span><span class="mord mathit mtight">i</span><span class="mord mathit mtight">u</span><span class="mord mathit mtight">m</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>Wenn Repeater/Hubs verwendet werden, erh&#xF6;ht sich die &#xDC;bertragungszeit <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mrow><mi>t</mi><mi>r</mi><mi>a</mi><mi>n</mi><mi>s</mi><mi>f</mi><mi>e</mi><mi>r</mi></mrow></msub></mrow><annotation encoding="application/x-tex">t_{transfer}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9011879999999999em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">t</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span><span class="mord mathit mtight">a</span><span class="mord mathit mtight">n</span><span class="mord mathit mtight">s</span><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span><span class="mord mathit mtight">e</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> entsprechend.</p>
+<h3 class="mume-header" id="%C3%BCbungen">&#xDC;bungen</h3>
+
+<ol>
+<li>Nenne einen <em>typischen</em> Vorteil der folgenden Topologien und ob sie heute noch allgemein eingesetzt wird.
+<ul>
+<li>Bus-Struktur<br>
+<em>? keine Verteiler ben&#xF6;tigt ?</em><br>
+<em>wird nicht mehr eingesetzt</em></li>
+<li>Baum-Struktur<br>
+<em>Kleine Kollisionsdom&#xE4;ne mit Switches, hierarchisch aufbaubar</em><br>
+<em>wird allgemein eingesetzt</em></li>
+<li>Ring-Struktur<br>
+<em>einfach erreichte Ausfallsicherheit, da Knoten mindestens 2 Mal angeschlossen werden</em><br>
+<em>wird nicht mehr eingesetzt</em></li>
+</ul>
+</li>
+<li>Man nenne je <em>zwei</em> typische Nach- oder Vorteile von CSMA/CD
+<ul>
+<li>Vorteile<br>
+<em>Kollisionserkennung</em><br>
+<em>Kein Master f&#xFC;r die &#xDC;bertragung n&#xF6;tig</em></li>
+<li>Nachteile<br>
+<em>nicht deterministisch</em><br>
+<em>?</em></li>
+</ul>
+</li>
+<li>siehe oben</li>
+<li>Abbildung 5.27 zeigt ein Ethernet-Signal (0.5&#xB5;s/Division). Eingezeichnet sind die letzten 4 Bits des Start-Frame-Delimiters.
+<ul>
+<li>Zeichnung</li>
+<li>doppelte spannung</li>
+<li>Manchester-Code, Vorteile:
+<ul>
+<li>Kollisionen einfach erkennbar</li>
+<li>Kann gleichstromfrei sein</li>
+<li>Taktr&#xFC;ckgewinnung auf einfache Weise</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Das zuerst gesendete Bit (I/G) einer Ethernet &quot;Destination Address&quot; hat die Bedeutung &quot;Individual Address/Group Address&quot;.
+<ul>
+<li>Wie wird eine &quot;Group Address&quot; (oder das zugeh&#xF6;rige Verfahren) &#xFC;blicherweise genannt?
+<ul>
+<li><em>Multicast-Adresse</em></li>
+</ul>
+</li>
+<li>Warum hat das Bit I/G in der &quot;Source Address&quot; keine Bedeutung?
+<ul>
+<li><em>Der Typ des Absenders des Pakets ist irrelevant</em></li>
+</ul>
+</li>
+<li>Man gebe in hexadezimalerDarstellung eine typische &quot;Group Address&quot; an.
+<ul>
+<li><em>FF-FF-FF-FF-FF-FF</em></li>
+</ul>
+</li>
+<li>Was f&#xFC;r ein Bit der Ethernet-Adresse hat sonst noch eine spezielle Funktion? Welche?
+<ul>
+<li><em>Das Bit nach dem LSB. Es bezeichnet ob die Adresse universal oder nur lokal administriert ist. (werden durch Software gesetzt)</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mit Hilfe des LAN/Ethernet-Analyzers stellt man fest, dass ein Ger&#xE4;t dauernd fehlerhafte Frames sendet. Man weiss jedoch nicht, welches Gerat dies sein k&#xF6;nnte.
+<ul>
+<li>Woran lasst sich erkennen, dass ein 802.3-Frame fehlerhaft ist (2 Antworten)?
+<ul>
+<li><em>Fehlererkennung, CRC-32 Checksumme</em></li>
+<li><em>Zu lang / zu kurz</em></li>
+</ul>
+</li>
+<li>Anhand von welcher (MAC-)Information l&#xE4;sst sich die Suche einschr&#xE4;nken?
+<ul>
+<li><em>Die ersten 3 Bytes geben den Hersteller an.</em></li>
+</ul>
+</li>
+<li>Wie k&#xF6;nnte man konkret vorgehen, um den &#xDC;belt&#xE4;ter (in einem grossen Netz) zu finden?
+<ul>
+<li><em>ARP-Request an Absender-Adresse?</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 class="mume-header" id="switched-lan-und-ethernet-technologien">Switched LAN und Ethernet-Technologien</h2>
+
+<p>Bridges und Switches (ent)koppeln Collision Domains.</p>
+<p><strong>Promiscuous Mode</strong><br>
+Alle Pakete an Ports entgegennehmen. (Bridges)</p>
+<p><strong>Filtering Database</strong><br>
+Bridge speichert Absenderadresse eines korrekten Frames, um sp&#xE4;ter nicht mehr an allen Ports zu senden.</p>
+<p><strong>Broadcast Domain (Layer 2)</strong><br>
+Repeater, Hub, BRidge, Switch sowie gleiches VLAN</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
