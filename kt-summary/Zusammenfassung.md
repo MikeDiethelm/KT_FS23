@@ -24,7 +24,7 @@ html:
 
 # Zusammenfassung KT
 
-## Inhaltsverzeichnis {ignore=true}
+## Inhaltsverzeichnis {ignore=false}
 [TOC]
 
 ## OSI-Referenzmodell
