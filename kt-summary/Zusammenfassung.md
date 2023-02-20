@@ -1,6 +1,5 @@
 ---
 title: Zusammenfassung KT
-author: Michael Schaufelberger
 toc:
   depth_from: 2
   depth_to: 3
